@@ -3,7 +3,12 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
 (require 'init-const)
+(require 'init-keymap)
 (require 'init-startup)
 (require 'init-elpa)
 (require 'init-package)
 (require 'init-ui)
+(require 'init-fonts)
+
+(when (file-exists-p custom-file)
+  (load-file custom-file))
